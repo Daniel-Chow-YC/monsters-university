@@ -9,8 +9,11 @@ class SpookyWorkshops():
         self.students_List = []
 
     def list_student_id(self):
+        student_id_list = []
         for student in self.students_List:
-            print(student.uni_id)
+            student_id_list.extend([student.uni_id])
+        return student_id_list
+
 
     def add_students(self, list_of_student):
         self.students_List.extend(list_of_student)

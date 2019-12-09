@@ -11,7 +11,7 @@ while True:
     print('4 -- See students grade')
     print('5 -- Print a students full information from their Student ID')
     print('6 -- Print a students full information from their name')
-    ui = input('Please choose a number or exit:')
+    ui = input('Please choose a number or exit: ')
     if ui == '1':
         print('You have chosen option 1')
         name = input("What is the students name?")
@@ -23,8 +23,8 @@ while True:
 
     elif ui == '2':
         print('You have chosen option 2')
-        for subject in running_workshops:
-            print(subject.scary_subject)
+        for spooky_workshop in running_workshops:
+            print(spooky_workshop.scary_subject)
 
     elif ui == '3':
         print('You have chosen option 3')
@@ -33,10 +33,10 @@ while True:
         for stu in students_list:
             if student == stu.uni_id:
                 student_chosen = stu
-                for subject in running_workshops:
-                    if workshop == subject.scary_subject:
-                        subject.add_students([student_chosen])
-                        # print(subject.list_student_id())
+                for spooky_workshop in running_workshops:
+                    if workshop == spooky_workshop.scary_subject:
+                        spooky_workshop.add_students([student_chosen])
+                        print(spooky_workshop.list_student_id())
 
     elif ui == '4':
         print('You have chosen option 4')
