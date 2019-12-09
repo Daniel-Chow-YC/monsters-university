@@ -8,7 +8,7 @@ class StudentMonster(Monster):
         self.__grade = grade
 
     def get_grade(self):
-        return f'{self.name}: {self.__grade}'
+        return f'{self.__grade}'
 
     # create a setter for the grade as well
     def set_grade(self, grade):
