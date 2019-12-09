@@ -7,11 +7,11 @@ while True:
     print('Choose an option:')
     print('1 -- Create a monster')
     print('2 -- List all workshops')
-    print('3 -- Add student to spooky workshop')
+    print('3 -- Add a student to a spooky workshop')
     print('4 -- See students grade')
     print('5 -- Print a students full information from their Student ID')
     print('6 -- Print a students full information from their name')
-    ui = input('Please choose a number or exit: ')
+    ui = input('Please choose a number, or exit: ')
     if ui == '1':
         print('You have chosen option 1')
         name = input("What is the students name?")
@@ -29,13 +29,14 @@ while True:
     elif ui == '3':
         print('You have chosen option 3')
         workshop = input('Select a workshop to add a student to. Select by subject: ')
-        student = input('Select the student you wish to add to this workshop. Select by student ID ')
+        student = input('Select the student you wish to add to this workshop. Select by student ID: ')
         for stu in students_list:
             if student == stu.uni_id:
                 student_chosen = stu
                 for spooky_workshop in running_workshops:
                     if workshop == spooky_workshop.scary_subject:
                         spooky_workshop.add_students([student_chosen])
+                        print('The students currently enrolled in this workshop, by their student ID are:')
                         print(spooky_workshop.list_student_id())
 
     elif ui == '4':
